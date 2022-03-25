@@ -1,0 +1,61 @@
+{
+  "name": "@nodly/remix-template",
+  "version": "1.0.0",
+  "description": "Simple starter template for Remix",
+  "author": "Nodly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodly/remix-template.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint app/**/*.{js,jsx,ts,tsx}",
+    "test": "jest",
+    "build": "run-s 'build:*'",
+    "build:css": "yarn generate:css --minify",
+    "build:remix": "remix build",
+    "dev": "run-p 'dev:*'",
+    "dev:css": "yarn generate:css --watch",
+    "dev:remix": "remix dev",
+    "generate:css": "npx tailwindcss -i ./styles/global.css -o ./app/styles/global.css",
+    "start": "remix-serve build",
+    "postinstall": "run-s 'postinstall:*'",
+    "postinstall:husky": "husky install",
+    "postinstall:remix": "remix setup node"
+  },
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "@remix-run/react": "1.3.3",
+    "@remix-run/serve": "1.3.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "remix": "1.3.3"
+  },
+  "devDependencies": {
+    "@nodly/prettier-config": "1.0.3",
+    "@remix-run/dev": "1.3.3",
+    "@remix-run/eslint-config": "1.3.3",
+    "@tailwindcss/aspect-ratio": "0.4.0",
+    "@tailwindcss/forms": "0.5.0",
+    "@tailwindcss/line-clamp": "0.3.1",
+    "@tailwindcss/typography": "0.5.2",
+    "@testing-library/jest-dom": "5.16.3",
+    "@testing-library/react": "12.1.4",
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14",
+    "autoprefixer": "10.4.4",
+    "esbuild-jest": "0.5.0",
+    "eslint": "8.11.0",
+    "eslint-config-prettier": "8.5.0",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "lint-staged": "12.3.7",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.12",
+    "prettier": "2.6.1",
+    "prettier-plugin-tailwindcss": "0.1.8",
+    "tailwindcss": "3.0.23",
+    "typescript": "4.6.3"
+  }
+}
