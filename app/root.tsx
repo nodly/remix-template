@@ -16,13 +16,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links = () => {
-  return [
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Inter&display=optional',
-    },
-    { rel: 'stylesheet', href: styles },
-  ];
+  return [{ rel: 'stylesheet', href: styles }];
 };
 
 export default function App() {
