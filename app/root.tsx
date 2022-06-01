@@ -12,8 +12,7 @@ import styles from './styles/global.css';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'New Remix App',
-  viewport: 'width=device-width,initial-scale=1',
+  viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
 });
 
 export const links = () => {
