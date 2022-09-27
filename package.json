@@ -24,7 +24,7 @@
     "postinstall:husky": "husky install",
     "postinstall:remix": "remix setup node"
   },
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "yarn@3.2.3",
   "dependencies": {
     "@remix-run/node": "1.5.1",
     "@remix-run/react": "1.5.1",
